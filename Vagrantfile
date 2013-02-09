@@ -2,8 +2,8 @@
 # vi: set ft=ruby :
 
 Vagrant::Config.run do |config|
-  config.vm.box = "lucid32"
-  # config.vm.box_url = "http://domain.com/path/to/above.box"
+  config.vm.box = "stripe-ctf-base"
+  config.vm.box_url = "https://www.dropbox.com/s/qhdb95prfjqh2r9/stripe-ctf-base-v2.box"
 
   config.vm.define :level2 do |level2_config|
     level2_config.vm.network :hostonly, "192.168.33.102"

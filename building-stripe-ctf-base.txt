@@ -1,0 +1,24 @@
+# Run these commands on the base lucid32 box to build stripe-ctf-base.box
+
+sudo /usr/bin/apt-get update
+sudo /usr/bin/apt-get install -y apache2 libapache2-mod-php5 libsqlite3-dev build-essential python-software-properties python-pip
+
+sudo add-apt-repository ppa:chris-lea/node.js
+sudo apt-get update
+sudo apt-get install -y nodejs npm 
+
+sudo gem install bundler sinatra sequel sqlite3 rest-client json rack rack_csrf --no-rdoc --no-ri
+
+sudo pip install flask flup
+
+# Phantom js
+wget http://phantomjs.googlecode.com/files/phantomjs-1.8.1-linux-i686.tar.bz2
+tar xjf phantomjs-1.8.1-linux-i686.tar.bz2
+sudo mv phantomjs-1.8.1-linux-i686/bin/phantomjs /usr/local/bin/
+sudo chown root:root /usr/local/bin/phantomjs 
+sudo apt-get install -y fontconfig
+
+wget https://github.com/n1k0/casperjs/tarball/1.0.2
+tar zxf 1.0.2
+sudo ln -s /home/vagrant/n1k0-casperjs-bc0da16/bin/casperjs /usr/local/bin
+
