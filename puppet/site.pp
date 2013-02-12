@@ -16,3 +16,8 @@ file {'/levels':
 	owner => 'vagrant',
 	group => 'vagrant',
 }
+
+# Disable the default apache2 site
+stripectf2::apache2site {'000-default':
+	ensure => 'absent',
+}

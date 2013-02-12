@@ -5,6 +5,7 @@ class stripectf2::level02 (
 	service {'apache2':
 		ensure => 'running',
 		enable => true,
+		hasrestart => true,
 	}
 
 	file {$destination:
@@ -35,5 +36,15 @@ class stripectf2::level02 (
 		owner => 'www-data',
 		group => 'www-data',
 		require => Stripectf2::Random_password["${destination}/password.txt"],
+	}
+	
+	$document_root = $destination
+	file {'/etc/apache2/sites-available/level02':
+		content => template('stripectf2/apache2-site-config.erb'),
+	}
+	
+	stripectf2::apache2site {'level02':
+		ensure => 'present',
+		require => File['/etc/apache2/sites-available/level02'],
 	}
 }
