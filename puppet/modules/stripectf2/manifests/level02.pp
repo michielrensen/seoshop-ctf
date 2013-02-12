@@ -40,10 +40,10 @@ class stripectf2::level02 (
 	
 	$document_root = $destination
 	file {'/etc/apache2/sites-available/level02':
-		content => template('stripectf2/apache2-site-config.erb'),
+		content => template('stripectf2/apache2_site_config.erb'),
 	}
 	
-	stripectf2::apache2site {'level02':
+	stripectf2::apache2_site {'level02':
 		ensure => 'present',
 		require => File['/etc/apache2/sites-available/level02'],
 	}

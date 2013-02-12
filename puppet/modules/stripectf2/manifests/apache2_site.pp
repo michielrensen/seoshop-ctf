@@ -2,7 +2,7 @@
 
 # Define an apache2 site. Place all site configs into
 # /etc/apache2/sites-available and en-/disable them with this type.
-define stripectf2::apache2site ( $ensure = 'present' ) {
+define stripectf2::apache2_site ( $ensure = 'present' ) {
 	$apache2_sites = "/etc/apache2/sites"
 	case $ensure {
 		'present' : {

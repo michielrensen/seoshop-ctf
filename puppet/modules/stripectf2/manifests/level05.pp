@@ -37,10 +37,3 @@ service {'srv.rb':
 	start => 'cd /level5 && bundle install && ./srv.rb &',
 	provider => 'base',
 }
-
-host {'level05-1.stripe-ctf.com':
-	ip => '192.168.33.105',
-}
-host {'level02-1.stripe-ctf.com':
-	ip => '192.168.33.102',
-}
