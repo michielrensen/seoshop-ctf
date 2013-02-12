@@ -7,10 +7,12 @@ Vagrant::Config.run do |config|
 
   config.vm.define :level2 do |level2_config|
     level2_config.vm.network :hostonly, "192.168.33.102"
+    level2_config.vm.host_name = "level02-1.stripe-ctf.com"
 
     level2_config.vm.provision :puppet do |puppet|
-       puppet.manifests_path = "puppet/manifests"
-       puppet.manifest_file  = "level02.pp"
+       puppet.manifests_path = "puppet"
+       puppet.module_path = "puppet/modules"
+       puppet.manifest_file  = "site.pp"
     end
   end
 

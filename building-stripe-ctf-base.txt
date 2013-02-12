@@ -11,13 +11,14 @@ sudo gem install bundler sinatra sequel sqlite3 rest-client json rack rack_csrf 
 
 sudo pip install flask flup
 
-# Phantom js
+# PhantomJS
 wget http://phantomjs.googlecode.com/files/phantomjs-1.8.1-linux-i686.tar.bz2
 tar xjf phantomjs-1.8.1-linux-i686.tar.bz2
 sudo mv phantomjs-1.8.1-linux-i686/bin/phantomjs /usr/local/bin/
 sudo chown root:root /usr/local/bin/phantomjs 
 sudo apt-get install -y fontconfig
 
+# CasperJS
 wget https://github.com/n1k0/casperjs/tarball/1.0.2
 tar zxf 1.0.2
 sudo ln -s /home/vagrant/n1k0-casperjs-bc0da16/bin/casperjs /usr/local/bin
