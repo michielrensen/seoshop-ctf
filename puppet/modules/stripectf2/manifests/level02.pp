@@ -46,6 +46,7 @@ class stripectf2::level02 (
 	$document_root = $destination
 	file {'/etc/apache2/sites-available/level02':
 		content => template('stripectf2/apache2_site_config.erb'),
+		notify => Service['apache2']
 	}
 	
 	stripectf2::apache2_site {'level02':

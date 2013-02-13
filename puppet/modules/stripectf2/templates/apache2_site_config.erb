@@ -1,3 +1,17 @@
 <VirtualHost *:80>
+	<% if @document_root %>
 	DocumentRoot <%= @document_root %>
+	<% end %>
+	
+	<% if @proxy_url %>
+	ProxyPreserveHost On
+    ProxyRequests off
+	ProxyPass / <%= @proxy_url %>
+	ProxyPassReverse / <%= @proxy_url %>
+	
+	<Proxy *>
+		Order Allow,Deny
+		Allow from all
+	</Proxy>
+	<% end %>
 </VirtualHost>
