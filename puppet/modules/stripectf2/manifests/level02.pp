@@ -7,6 +7,11 @@ class stripectf2::level02 (
 		enable => true,
 		hasrestart => true,
 	}
+	
+	# Disable the default apache2 site
+	stripectf2::apache2_site {'000-default':
+		ensure => 'absent',
+	}
 
 	file {$destination:
 		ensure => 'directory',

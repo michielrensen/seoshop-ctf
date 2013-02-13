@@ -17,8 +17,4 @@ file {'/levels':
 	group => 'vagrant',
 }
 
-# Disable the default apache2 site
-stripectf2::apache2_site {'000-default':
-	ensure => 'absent',
-}
 
