@@ -23,7 +23,9 @@ Vagrant::Config.run do |config|
   config.vm.define :level5 do |box_config|
     configure(box_config, "5")
   end
-  
+  config.vm.define :level6 do |box_config|
+    configure(box_config, "6")
+  end
   config.vm.define :level8 do |box_config|
     configure(box_config, "8")
   end
