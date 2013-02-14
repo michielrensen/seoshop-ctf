@@ -15,7 +15,7 @@ end
 
 Vagrant::Config.run do |config|
   config.vm.box = "stripe-ctf-base"
-  config.vm.box_url = "https://www.dropbox.com/s/qhdb95prfjqh2r9/stripe-ctf-base-v2.box"
+  config.vm.box_url = "https://www.dropbox.com/s/kpk5gett03vu8au/stripe-ctf-base-v3.box"
 
   config.vm.define :level2 do |box_config|
     configure(box_config, "2")
