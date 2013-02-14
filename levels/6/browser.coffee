@@ -25,7 +25,7 @@ if not casper.cli.has(0)
     console.log 'Usage: browser.coffee <url to visit>'
     casper.exit 1
 
-password = fs.open('public_html/password.txt', 'r').read().trim()
+password = fs.open('password.txt', 'r').read().trim()
 
 page_address = casper.cli.get(0)
 console.log "Page address is: #{page_address}"

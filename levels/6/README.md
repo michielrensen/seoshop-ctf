@@ -27,7 +27,7 @@ application so that other people can run their own Streamer instances.
 
 ## level07-password-holder
 
-We used [CapserJS](http://casperjs.org/) on top of
+We used [CasperJS](http://casperjs.org/) on top of
 [PhantomJS](http://phantomjs.org/) to power the **level07-password-holder**
-user. Run `capserjs browser.coffee http://localhost:4567` to start it up. It
-expects to find the password from the filesystem `public_html/password.txt`.
+user. Run `casperjs browser.coffee http://localhost:4567` to start it up. It
+expects to find the password from the filesystem `password.txt`.
