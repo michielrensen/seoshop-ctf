@@ -1,4 +1,4 @@
-class stripectf2::level05 (
+class stripectf2::level08 (
 	$destination,
 	$source,
 ) {
@@ -10,23 +10,20 @@ class stripectf2::level05 (
 		group => 'vagrant',
 		source => $source,
 	}
-
-	# This file tells our service to run in production mode
-	file {"${destination}/production":
-		ensure => 'present',
-		content => '',
-		require => File[$destination]
-	}
-
+	
 	stripectf2::random_password {"${destination}/password.txt":
+		validchars => '0-9',
+		numchars => '12',
 		require => File[$destination],
 	}
 
-	service {'srv.rb':
+	service {'password_db_launcher':
 		ensure => 'running',
-		start => "cd ${destination} && bundle install && ./srv.rb &",
+		start => "cd ${destination} && ./password_db_launcher `cat password.txt` 127.0.0.1:3000 &",
 		provider => 'base',
-		require => [File[$destination], Stripectf2::Random_password["${destination}/password.txt"]],
+		require => [File[$destination],
+					Service['apache2'],
+					Stripectf2::Random_password["${destination}/password.txt"]],
 	}
 	
 	service {'apache2':
@@ -44,14 +41,14 @@ class stripectf2::level05 (
 		ensure => 'present',
 	}
 	
-	$proxy_url = "http://127.0.0.1:4567/"
-	file {'/etc/apache2/sites-available/level05':
+	$proxy_url = "http://127.0.0.1:3000/"
+	file {'/etc/apache2/sites-available/level08':
 		content => template('stripectf2/apache2_site_config.erb'),
 		notify => Service['apache2'],
 	}
 	
-	stripectf2::apache2_site {'level05':
+	stripectf2::apache2_site {'level08':
 		ensure => 'present',
-		require => File['/etc/apache2/sites-available/level05'],
+		require => File['/etc/apache2/sites-available/level08'],
 	}
 }
