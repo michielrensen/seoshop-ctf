@@ -2,17 +2,6 @@ class stripectf2::level02 (
 	$destination,
 	$source,
 ) {
-	service {'apache2':
-		ensure => 'running',
-		enable => true,
-		hasrestart => true,
-	}
-	
-	# Disable the default apache2 site
-	stripectf2::apache2_site {'000-default':
-		ensure => 'absent',
-	}
-
 	file {$destination:
 		ensure => 'directory',
 		recurse => true,
@@ -43,14 +32,7 @@ class stripectf2::level02 (
 		require => Stripectf2::Random_password["${destination}/password.txt"],
 	}
 	
-	$document_root = $destination
-	file {'/etc/apache2/sites-available/level02':
-		content => template('stripectf2/apache2_site_config.erb'),
-		notify => Service['apache2']
-	}
-	
-	stripectf2::apache2_site {'level02':
-		ensure => 'present',
-		require => File['/etc/apache2/sites-available/level02'],
+	stripectf2::apache2 {'level02':
+		$document_root => $destination,
 	}
 }
