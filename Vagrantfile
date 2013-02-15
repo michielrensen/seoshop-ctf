@@ -17,7 +17,7 @@ Vagrant::Config.run do |config|
   config.vm.box = "stripe-ctf-base"
   config.vm.box_url = "https://www.dropbox.com/s/kpk5gett03vu8au/stripe-ctf-base-v3.box"
 
-  [2, *4..8].each do |number|
+  [0, 2, *4..8].each do |number|
     config.vm.define "level#{number}".to_sym do |box_config|
       configure(box_config, number)
     end
