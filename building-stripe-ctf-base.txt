@@ -26,3 +26,6 @@ sudo ln -s /home/vagrant/n1k0-casperjs-bc0da16/bin/casperjs /usr/local/bin
 # Level 8
 sudo apt-get install -y python2.6-dev
 sudo pip install -U Twisted==11.1.0 argparse==1.2.1 distribute==0.6.24 wsgiref==0.1.2 zope.interface==4.0.1
+
+# Level 7
+sudo pip install requests py-bcrypt
