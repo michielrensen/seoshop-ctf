@@ -29,3 +29,6 @@ sudo pip install -U Twisted==11.1.0 argparse==1.2.1 distribute==0.6.24 wsgiref==
 
 # Level 7
 sudo pip install requests py-bcrypt
+
+# Git, to use origin/master instead of local working copy
+sudo apt-get install git-core

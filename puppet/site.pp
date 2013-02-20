@@ -9,7 +9,6 @@ Exec {
   path => "/usr/bin:/usr/sbin:/bin:/usr/local/bin"
 }
 
-# TODO: Pull in all the level code from ? (github?)
 file {'/levels':
 	ensure => 'directory',
 	mode => '0777',
@@ -17,4 +16,22 @@ file {'/levels':
 	group => 'vagrant',
 }
 
+# Create directory for code, and make sure it's empty
+file {'/level_code':
+	ensure => 'directory',
+	mode => '0777',
+	owner => 'vagrant',
+	group => 'vagrant',
+	recurse => true,
+	purge => true,
+	force => true,
+}
 
+# Using git, export levels folder from origin/master into /level_code
+# Not going directly into /levels because level 4 wants to ignore password.txt
+exec {'git archive levels':
+	command => 'git archive origin/master levels | tar -x --strip-components 1 -C /level_code',
+	cwd => '/vagrant/',
+	user => 'vagrant',
+	require => File['/level_code'],
+}
