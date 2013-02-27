@@ -33,6 +33,6 @@ class stripectf2::level02 (
 	}
 	
 	stripectf2::apache2 {'level02':
-		$document_root => $destination,
+		document_root => $destination,
 	}
 }
