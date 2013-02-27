@@ -11,9 +11,10 @@ class stripectf2::level01 (
 		owner => 'www-data',
 		group => 'www-data',
 		source => $source,
+		ignore => 'level02-password.txt', # Don't copy the dummy password.txt file
 	}
 	
-	stripectf2::random_password {"${destination}/password.txt":
+	stripectf2::random_password {"${destination}/level02-password.txt":
 		require => File[$destination],
 	}
 	
@@ -21,7 +22,7 @@ class stripectf2::level01 (
 		mode => '0333',
 		owner => 'www-data',
 		group => 'www-data',
-		require => Stripectf2::Random_password["${destination}/password.txt"],
+		require => Stripectf2::Random_password["${destination}/level02-password.txt"],
 	}
 	
 	stripectf2::apache2 {'level01':

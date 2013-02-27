@@ -19,10 +19,7 @@ Vagrant::Config.run do |config|
 
 
   [*0..8].each do |number|
-<<<<<<< HEAD
 
-=======
->>>>>>> Level 1 done
     config.vm.define "level#{number}".to_sym do |box_config|
       configure(box_config, number)
     end
