@@ -9,6 +9,7 @@ class stripectf2::level05 (
 		owner => 'vagrant',
 		group => 'vagrant',
 		source => $source,
+		ignore => 'password.txt', # Don't copy the dummy password.txt file
 	}
 
 	# This file tells our service to run in production mode
