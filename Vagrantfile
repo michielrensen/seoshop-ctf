@@ -4,7 +4,7 @@
 # Helper method to do all common Vagrant config for a given level number
 def configure(vm_config, number)
   vm_config.vm.network :hostonly, "192.168.33.10#{number}"
-  vm_config.vm.host_name = "level0#{number}-1.stripe-ctf.com"
+  vm_config.vm.host_name = "level0#{number}.seoshop.net"
   
   vm_config.vm.provision :puppet do |puppet|
      puppet.manifests_path = "puppet"
