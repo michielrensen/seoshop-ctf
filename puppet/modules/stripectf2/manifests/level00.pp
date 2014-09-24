@@ -15,6 +15,9 @@ class stripectf2::level00 (
 		# Include hard-coded sqlite db, instead of trying to generate something random
 		source => 'puppet:///modules/stripectf2/level00.db',
 		require => File[$destination],
+		mode => '0666',
+		owner => 'vagrant',
+		group => 'vagrant'
 	}
 
 	service {'level00.js':

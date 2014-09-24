@@ -1,12 +1,12 @@
 # Stripe CTF Vagrant boxes
 # Copy/paste into your hosts file
-192.168.33.100	level00-1.stripe-ctf.com
-192.168.33.101	level01-1.stripe-ctf.com
-192.168.33.102	level02-1.stripe-ctf.com
-192.168.33.103	level03-1.stripe-ctf.com
-192.168.33.104	level04-1.stripe-ctf.com
-192.168.33.105	level05-1.stripe-ctf.com
-192.168.33.106	level06-1.stripe-ctf.com
-192.168.33.107	level07-1.stripe-ctf.com
-192.168.33.108	level08-1.stripe-ctf.com
+192.168.1.100	level00.seoshop.net
+192.168.1.101	level01.seoshop.net
+192.168.1.102	level02.seoshop.net
+192.168.1.103	level03.seoshop.net
+192.168.1.104	level04.seoshop.net
+192.168.1.105	level05.seoshop.net
+192.168.1.106	level06.seoshop.net
+192.168.1.107	level07.seoshop.net
+192.168.1.108	level08.seoshop.net
 

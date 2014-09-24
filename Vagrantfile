@@ -3,7 +3,7 @@
 
 # Helper method to do all common Vagrant config for a given level number
 def configure(vm_config, number)
-  vm_config.vm.network :hostonly, "192.168.33.10#{number}"
+  vm_config.vm.network "public_network", ip: "192.168.1.10#{number}", bridge: "en0: Wi-Fi (AirPort)"
   vm_config.vm.host_name = "level0#{number}.seoshop.net"
   
   vm_config.vm.provision :puppet do |puppet|
@@ -13,7 +13,7 @@ def configure(vm_config, number)
   end
 end
 
-Vagrant::Config.run do |config|
+Vagrant.configure("2") do |config|
   config.vm.box = "stripe-ctf-base"
   config.vm.box_url = "https://dl.dropbox.com/s/jbkevez3gvay7ue/stripe-ctf-base-v4.box?&dl=1"
 

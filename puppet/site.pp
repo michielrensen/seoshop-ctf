@@ -30,7 +30,7 @@ file {'/level_code':
 # Using git, export levels folder from origin/master into /level_code
 # Not going directly into /levels because level 4 wants to ignore password.txt
 exec {'git archive levels':
-	command => 'git archive origin/master levels | tar -x --strip-components 1 -C /level_code',
+	command => 'git archive develop levels | tar -x --strip-components 1 -C /level_code',
 	cwd => '/vagrant/',
 	user => 'vagrant',
 	require => File['/level_code'],
