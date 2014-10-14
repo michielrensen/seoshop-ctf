@@ -3,7 +3,7 @@
 
 # Helper method to do all common Vagrant config for a given level number
 def configure(vm_config, number)
-  vm_config.vm.network "public_network", ip: "192.168.1.10#{number}", bridge: "en0: Wi-Fi (AirPort)"
+  vm_config.vm.network "public_network", ip: "192.168.1.24#{number}"
   vm_config.vm.host_name = "level0#{number}.seoshop.net"
   
   vm_config.vm.provision :puppet do |puppet|

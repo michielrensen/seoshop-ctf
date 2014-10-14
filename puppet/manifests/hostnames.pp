@@ -1,36 +1,36 @@
 
 host {'level00.seoshop.net':
-	ip => '192.168.1.100',
+	ip => '192.168.1.240',
 }
 
 host {'level01.seoshop.net':
-	ip => '192.168.1.101',
+	ip => '192.168.1.241',
 }
 
 host {'level02.seoshop.net':
-	ip => '192.168.1.102',
+	ip => '192.168.1.242',
 }
 
 host {'level03.seoshop.net':
-	ip => '192.168.1.103',
+	ip => '192.168.1.243',
 }
 
 host {'level04.seoshop.net':
-	ip => '192.168.1.104',
+	ip => '192.168.1.244',
 }
 
 host {'level05.seoshop.net':
-	ip => '192.168.1.105',
+	ip => '192.168.1.245',
 }
 
 host {'level06.seoshop.net':
-	ip => '192.168.1.106',
+	ip => '192.168.1.246',
 }
 
 host {'level07.seoshop.net':
-	ip => '192.168.1.107',
+	ip => '192.168.1.247',
 }
 
 host {'level08.seoshop.net':
-	ip => '192.168.1.108',
+	ip => '192.168.1.248',
 }
