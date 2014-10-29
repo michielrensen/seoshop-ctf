@@ -81,7 +81,7 @@ class PrimaryProcessor(common.PayloadProcessor):
                        (address_spec, error, backtrace))
         self.respondWithMessage('Error! This should never happen in '
                                 'production, but it seems that it did. Contact'
-                                ' us at ctf@stripe.com to let us know.')
+                                ' us at enygma@unseen.is to let us know.')
 
     def sendResult(self, success):
         result = {'success': success}

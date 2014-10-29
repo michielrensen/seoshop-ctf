@@ -1,36 +1,36 @@
 
-host {'level00-1.stripe-ctf.com':
-	ip => '192.168.33.100',
+host {'level00.seoshop.net':
+	ip => '192.168.1.240',
 }
 
-host {'level01-1.stripe-ctf.com':
-	ip => '192.168.33.101',
+host {'level01.seoshop.net':
+	ip => '192.168.1.241',
 }
 
-host {'level02-1.stripe-ctf.com':
-	ip => '192.168.33.102',
+host {'level02.seoshop.net':
+	ip => '192.168.1.242',
 }
 
-host {'level03-1.stripe-ctf.com':
-	ip => '192.168.33.103',
+host {'level03.seoshop.net':
+	ip => '192.168.1.243',
 }
 
-host {'level04-1.stripe-ctf.com':
-	ip => '192.168.33.104',
+host {'level04.seoshop.net':
+	ip => '192.168.1.244',
 }
 
-host {'level05-1.stripe-ctf.com':
-	ip => '192.168.33.105',
+host {'level05.seoshop.net':
+	ip => '192.168.1.245',
 }
 
-host {'level06-1.stripe-ctf.com':
-	ip => '192.168.33.106',
+host {'level06.seoshop.net':
+	ip => '192.168.1.246',
 }
 
-host {'level07-1.stripe-ctf.com':
-	ip => '192.168.33.107',
+host {'level07.seoshop.net':
+	ip => '192.168.1.247',
 }
 
-host {'level08-1.stripe-ctf.com':
-	ip => '192.168.33.108',
+host {'level08.seoshop.net':
+	ip => '192.168.1.248',
 }

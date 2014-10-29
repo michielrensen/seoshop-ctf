@@ -1,4 +1,4 @@
-node 'level07-1.stripe-ctf.com' {
+node 'level07.seoshop.net' {
 	class {'stripectf2::level07':
 		destination => '/levels/07',
 		source => '/level_code/7',

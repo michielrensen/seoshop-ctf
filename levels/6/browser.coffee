@@ -9,7 +9,7 @@
 #     - git checkout tags/1.0.0-RC1
 #     - ln -sf `pwd`/bin/casperjs /usr/local/bin/casperjs
 #   - Run it!
-#     - casperjs browser.coffee http://level04.stripe-ctf.com/
+#     - casperjs browser.coffee http://level06.seoshop.net/
 #     - (change above path to match the actual CTF path)
 #
 # Will exit(0) if success, exit(other) if failure

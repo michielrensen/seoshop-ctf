@@ -30,14 +30,11 @@ same machine).
 
 As a secure cherry on top, the machine hosting the primary server has very
 locked down network access. It can only make outbound requests to other
-`stripe-ctf.com` servers. As you learned in Level 5, someone forgot to
+`seoshop.net` servers. As you learned in Level 5, someone forgot to
 internally firewall off the high ports from the Level 2 server. (It's almost
 like someone on the inside is helping you &mdash; there's an
 [sshd](http://linux.about.com/od/commands/l/blcmdl8_sshd.htm) running on the
 Level 2 server as well.)
-
-*NB: During the actual Stripe CTF, the Level 8 server could access all high TCP
-ports on the Level 2 server, and the Level 2 server was running an SSHD.*
 
 To maximize adoption, usability is also a goal of PasswordDB. Hence a launcher
 script, `password_db_launcher`, has been created for the express purpose of

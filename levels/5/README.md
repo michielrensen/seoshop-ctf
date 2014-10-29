@@ -16,11 +16,8 @@ user of a level05 machine...
 
 To avoid nefarious exploits, the machine hosting the DomainAuthenticator has
 very locked down network access. It can only make outbound requests to other
-`stripe-ctf.com` servers. Though, you've heard that someone forgot to
+`seoshop.net` servers. Though, you've heard that someone forgot to
 internally firewall off the high ports from the Level 2 server.
-
-*NB: During the actual Stripe CTF, we allowed full network access from the
-Level 5 server to the Level 2 server.*
 
 # To run
 
