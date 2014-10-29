@@ -1,4 +1,6 @@
-# Stripe Capture the Flag: Web Edition
+# SEOshop Capture the Flag: Web Edition
+
+## Base on: Stripe Capture the Flag: Web Edition
 
 ![STRIPE CTF 2.0](https://stripe.com/img/blog/posts/ctf-20/ctf20.png)
 
@@ -8,3 +10,5 @@ which ran from August 22-29, 2012.
 https://stripe.com/blog/capture-the-flag-20
 
 https://stripe.com/blog/capturetheflag
+
+It also contains a Vagrant setup with 9 boxes to simulate the server setup from the original CTF.
