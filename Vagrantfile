@@ -14,8 +14,8 @@ def configure(vm_config, number)
 end
 
 Vagrant.configure("2") do |config|
-  config.vm.box = "stripe-ctf-base"
-  config.vm.box_url = "https://dl.dropbox.com/s/jbkevez3gvay7ue/stripe-ctf-base-v4.box?&dl=1"
+  config.vm.box = "seoshop-ctf-base"
+  config.vm.box_url = "https://www.dropbox.com/s/z4argcnze1h4mr5/seoshop-ctf-base.box?dl=1"
 
 
   [*0..8].each do |number|
